@@ -5,7 +5,7 @@ Feature: Creating a ToDo
 
   Scenario: Successfully creating a todo
     Given I am on the todo index page
-    When I click on the button "create"
+    When I click on the link "create"
     Then I should be on a new todo form
     When I create a todo with the content "Get my life together"
     Then I should be on the todo list page
@@ -13,7 +13,7 @@ Feature: Creating a ToDo
 
   Scenario: Failing to create a to do
     Given I am on the todo index page
-    When I click on the button "create"
+    When I click on the link "create"
     Then I should be on a new todo form
     When I create a todo with the content ""
     Then I should be on a new todo form

@@ -1,0 +1,15 @@
+<h1> ToDo Index </h1>
+
+<div id='list'>
+  <% if @todos.empty? %>
+    <h2> No todos! </h2>
+  <% else %>
+    <% @todos.each do |todo| %>
+      <p><%= todo.content %></p>
+    <% end %>
+  <% end %>
+</div>
+
+<%= link_to 'create', new_todo_path %>
+
+
