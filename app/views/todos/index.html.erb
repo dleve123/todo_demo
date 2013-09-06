@@ -5,7 +5,10 @@
     <h2> No todos! </h2>
   <% else %>
     <% @todos.each do |todo| %>
-      <p><%= todo.content %></p>
+      <div id='<%= todo.id %>'>
+        <p><%= todo.content %></p>
+        <%= link_to 'done', todo, method: :delete %>
+      </div>
     <% end %>
   <% end %>
 </div>

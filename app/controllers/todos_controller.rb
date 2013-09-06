@@ -16,4 +16,10 @@ class TodosController < ApplicationController
       redirect_to new_todo_path
     end
   end
+
+  def destroy
+    @todo = Todo.where(params[:todo]).first
+    @todo.destroy
+    redirect_to todos_path
+  end
 end

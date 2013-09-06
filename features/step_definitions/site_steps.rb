@@ -2,7 +2,6 @@ Given(/^I am on the todo index page$/) do
   visit root_path
 end
 
-
 When(/^I click on the link "(.*?)"$/) do |link_name|
   click_link link_name
 end
@@ -23,4 +22,8 @@ end
 
 Then(/^error messages should be displayed$/) do
   page.should have_content "Content cannot be empty!"
+end
+
+Then(/^the list should be empty$/) do
+  page.should have_content 'No todos!'
 end
